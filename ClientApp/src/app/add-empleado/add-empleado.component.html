@@ -1,0 +1,43 @@
+<h1>Formulario para añadir Empleado:</h1>
+
+<form class="form-group" [formGroup]="empleadoForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="Nombre">Nombre:</label>
+    <input class="form-control" for="Nombre" type="text" formControlName="Nombre">
+  </div>
+
+  <div>
+    <label for="Apellido">Apellido:</label>
+    <input class="form-control" for="Apellido" type="text" formControlName="Apellido">
+  </div>
+
+  <div>
+    <label for="Edad">Edad:</label>
+    <input class="form-control" for="Edad" type="number" formControlName="Edad">
+  </div>
+
+  <div>
+    <label for="Telefono">Teléfono:</label>
+    <input class="form-control" for="Telefono" type="text" formControlName="Telefono">
+  </div>
+
+  <div>
+    <label for="Camion">Camión:</label>
+    <input class="form-control" for="Camion" type="text" formControlName="Camion">
+  </div>
+
+  <div>
+    <label for="Ruta">Ruta:</label>
+    <input class="form-control" for="Ruta" type="text" formControlName="Ruta">
+  </div>
+
+  <div>
+    <label for="Direccion">Dirección:</label>
+    <input class="form-control" for="Direccion" type="text" formControlName="Direccion">
+  </div>
+
+  <br/>
+  <button class="btn btn-primary" type="submit" [disabled]="!empleadoForm.valid">Añadir Empleado</button>
+</form>
+<br/>
+<app-delete-empleado></app-delete-empleado>

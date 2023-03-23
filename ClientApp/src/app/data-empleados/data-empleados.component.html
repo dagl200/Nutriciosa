@@ -1,0 +1,31 @@
+<h1 id="tableLabel">Empleados</h1>
+
+<p *ngIf="!empleados?.length"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="empleados.length">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Edad</th>
+      <th>Telefono</th>
+      <th>Ruta</th>
+      <th>Camión</th>
+      <th>Dirección</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of empleados">
+      <td>{{ data.id }}</td>
+      <td>{{ data.nombre }}</td>
+      <td>{{ data.apellido }}</td>
+      <td>{{ data.edad }}</td>
+      <td>{{ data.telefono }}</td>
+      <td>{{ data.ruta }}</td>
+      <td>{{ data.camion }}</td>
+      <td>{{ data.direccion }}</td>
+    </tr>
+  </tbody>
+</table>

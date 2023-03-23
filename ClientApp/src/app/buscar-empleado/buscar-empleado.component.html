@@ -1,0 +1,36 @@
+<h1>Buscar Empleado por ID</h1>
+<br/>
+<div>
+<label for="add">ID empleado:</label>
+<input class="form-control" for="add" type="text" [formControl]="buscar_empleado">
+</div>
+<br/>
+<button class="btn btn-primary" type="button" (click)="onClick()">Buscar Empleado</button>
+
+<table class='table table-striped' aria-labelledby="tableLabel" >
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Edad</th>
+      <th>Telefono</th>
+      <th>Ruta</th>
+      <th>Camión</th>
+      <th>Dirección</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ empleado.id }}</td>
+      <td>{{ empleado.nombre }}</td>
+      <td>{{ empleado.apellido }}</td>
+      <td>{{ empleado.edad }}</td>
+      <td>{{ empleado.telefono }}</td>
+      <td>{{ empleado.ruta }}</td>
+      <td>{{ empleado.camion }}</td>
+      <td>{{ empleado.direccion }}</td>
+    </tr>
+  </tbody>
+</table>
